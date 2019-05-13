@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 
 @RestController
-@RequestMapping("/api2")
+@RequestMapping("/api")
 public class FHIRPatientController {
 	
 	private TerminRepository repository;
