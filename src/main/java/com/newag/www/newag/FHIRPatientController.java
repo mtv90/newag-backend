@@ -22,16 +22,12 @@ public class FHIRPatientController {
 	}
 	
 	@CrossOrigin
-	@GetMapping("/termins")
+	@GetMapping("/termine")
 	public Collection<Termin> termine(){
 		return repository.findAll().stream()
-				.filter(this::isPremium)
 				.collect(Collectors.toList());
 	}
-	
-	private boolean isPremium(Termin termin) {
-		return !termin.getName().equals("Mike") && !termin.getName().equals("Alex");
-	}
+
 	
 	@RequestMapping(value="/")
 	public String index() {
