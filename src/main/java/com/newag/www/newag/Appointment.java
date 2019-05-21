@@ -2,19 +2,22 @@ package com.newag.www.newag;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.Table;
 
 @Entity
-public class Termin {
+@Table(name="tbl_termine")
+public class Appointment {
 
 	@Id
-	@GeneratedValue
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 	private String name;
 	
-	private Termin() {}
+	private Appointment() {}
 	
-	public Termin(String name) {
+	public Appointment(String name) {
 		this.name = name;
 	}
 

@@ -5,7 +5,6 @@ import org.springframework.data.rest.core.annotation.RepositoryRestResource;
 import org.springframework.web.bind.annotation.CrossOrigin;
 
 @CrossOrigin
-@RepositoryRestResource(path="termine")
-public interface TerminRepository extends JpaRepository<Termin, Long>{
+public interface AppointmentRepository extends JpaRepository<Appointment, Long>{
 	
 }
